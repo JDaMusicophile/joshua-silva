@@ -1,8 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Navbar from '../Components/Layout'
-import {Code} from '@chakra-ui/react'
+import {Code, Link} from '@chakra-ui/react'
 
 export default function Home() {
   return (

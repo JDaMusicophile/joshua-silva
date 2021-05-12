@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import { Flex, Box, Text, useColorMode, Button} from '@chakra-ui/react';
+import { Flex, Box, Text, useColorMode, Butto, Link} from '@chakra-ui/react';
 import { CloseIcon, HamburgerIcon, PhoneIcon } from '@chakra-ui/icons';
 import Image from 'next/image';
-import Link from 'next/Link';
 import DarkModeSwitch from './DarkModeSwitch';
 
 const MenuItem = ({ children, isLast, to = '/' }) => {

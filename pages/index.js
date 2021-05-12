@@ -22,7 +22,7 @@ export default function Home() {
 
         <p className={styles.description}>
           Welcome to my {' '}
-          <Code className={styles.code}>personal portfolio</Code>
+          <Code className={styles.code}>Personal Portfolio</Code>
         </p>
 
         <div className={styles.grid}>

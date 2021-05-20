@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Flex, Box, Text, useColorMode, Butto, Link} from '@chakra-ui/react';
 import { CloseIcon, HamburgerIcon, PhoneIcon } from '@chakra-ui/icons';
-import Image from 'next/image';
+import Image from 'next/image'; 
 import DarkModeSwitch from './DarkModeSwitch';
 
 const MenuItem = ({ children, isLast, to = '/' }) => {
@@ -9,7 +9,7 @@ const MenuItem = ({ children, isLast, to = '/' }) => {
     <Text
       mb={{ base: isLast ? 0 : 8, sm: 0 }}
       mr={{ base: 0, sm: isLast ? 0 : 8 }}
-      display="block"
+      display="block" color='white'
     >
       <Link href={to}>{children}</Link>
     </Text>
@@ -24,16 +24,17 @@ const Header = (props) => {
 
     <Flex
       mb={8}
-      p={8}
+      p={1}
       as="nav"
       align="center"
       justify="space-between"
       wrap="wrap"
       w="100%"
+      bgColor='black'
     >
     <Flex>    
         <Image
-        src="/Josh_Logo.png"
+        src="/Josh_Logo_White.png"
         alt="Author Logo"
         width={45}
         height={45}/>

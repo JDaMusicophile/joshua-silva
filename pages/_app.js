@@ -1,12 +1,14 @@
 import '../styles/globals.css'
 import { ChakraProvider } from "@chakra-ui/react"
-import Layout from '../Components/Layout'
+import Header from '../Components/Header'
+import Footer from '../Components/Footer'
 
 function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider>
-      <Layout />
+      <Header />
       <Component {...pageProps} />
+      <Footer />
     </ChakraProvider>
   )
 }

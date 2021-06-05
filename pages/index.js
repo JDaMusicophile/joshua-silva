@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import {Code, Link} from '@chakra-ui/react'
+import {Code} from '@chakra-ui/react'
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
+   return (
+    <div className={styles.container} >
       
       <Head>
         <title>Josh Silva</title>
@@ -14,11 +14,11 @@ export default function Home() {
       </Head>
       
       
-      <main className={styles.main}>       
+      <main className={styles.main}>    
         <h1 className={styles.title}>
           <a href="https://www.instagram.com/j_damusicophile/" >Josh Silva</a>
         </h1>
-
+        
         <p className={styles.description}>
           Welcome to my {' '}
           <Code className={styles.code}>Personal Portfolio</Code>

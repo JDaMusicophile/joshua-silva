@@ -17,7 +17,6 @@ const Header = (props) => {
     
 
     <Flex
-      mb={8}
       p={1}
       as="nav"
       align="center"
@@ -35,21 +34,17 @@ const Header = (props) => {
         
         <DarkModeSwitch/>
     </Flex>
-
-      <Box
-        display={{ base: show ? 'block' : 'none', md: 'block' }}
-        flexBasis={{ base: '100%', md: 'auto' }}
-      >
-        
+    
+      <Box>        
         <Flex
           align="center"
           justify={['center', 'space-between', 'flex-end', 'flex-end']}
           direction={['column', 'row', 'row', 'row']}
-          pt={[4, 4, 0, 0]}
         >
-          <Button ref={btnRef} colorScheme="teal" onClick={onOpen} alignSelf="flex-end">
+          <Button ref={btnRef} bgColor="teal" onClick={onOpen} alignSelf="flex-end">
           <HamburgerIcon/>
           </Button>
+          
           <Drawer
         isOpen={isOpen}
         placement="right"
@@ -83,6 +78,11 @@ const Header = (props) => {
                   More
                 </Button>
               </NextLink>
+              <NextLink href="/photography" passHref>
+                <Button as="a" variant="ghost" aria-label="Home" my={5} w="100%">
+                  Photography
+                </Button>
+              </NextLink>
             </Flex>
           </DrawerBody>
 
@@ -93,6 +93,8 @@ const Header = (props) => {
             ReactDOM.render(<SocialIcon url="https://twitter.com/JDaMusicophile"/>, document.body);
             ReactDOM.render(<SocialIcon url="https://www.instagram.com/j_damusicophile/"/>, document.body);
             ReactDOM.render(<SocialIcon url="https://www.facebook.com/JDaMusicophile/"/>, document.body);
+            ReactDOM.render(<SocialIcon url="https://github.com/JDaMusicophile"/>, document.body);
+
             </HStack>
           </footer>
          

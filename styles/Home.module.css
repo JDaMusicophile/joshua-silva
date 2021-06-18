@@ -52,6 +52,7 @@
 .title {
   margin: 0;
   line-height: 1.15;
+
   font-size: 4rem;
 }
 
@@ -124,7 +125,29 @@
     flex-direction: column;
   }
 }
-.LandingImage {
-  background-image: "Profile.jpg";
+
+.PageContainerWelcome {
+  height: 100vh;
   position: relative;
+  background-size: cover;
+  background-image: url("/Profile.jpg");
+  }
+
+.product {
+  padding: 24px;
 }
+
+.product_Row{
+  display: flex;
+}
+
+.product_ColIm,
+.product_Col{
+  flex: 1;
+}
+
+.product_ColImg{
+  max-width: 100px;
+  margin-right: 25px;
+}
+

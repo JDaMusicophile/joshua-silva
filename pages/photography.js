@@ -11,7 +11,6 @@ import {background, Code, flexbox, Image, Text, Button, Stat, StatNumber, Alert,
   ModalBody,
   ModalCloseButton,} from '@chakra-ui/react'
 import { PhoneIcon, CloseButton, ExternalLinkIcon } from '@chakra-ui/icons'
-import galleries from '../gallery.json'
 import { fromImageTOUrl, API_URL } from '../Components/Utils/urls'
 import NextLink from 'next/link'
 import Link from 'next/link'

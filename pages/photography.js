@@ -38,7 +38,7 @@ export default function Home() {
         </Text>
         
         <Grid templateColumns="repeat(5, 1fr)" templateRows="repeat(4, 1fr)" >
-        {galleries.map(gallery => (
+        {products.map(product => (
             <GridItem 
               boxShadow="base"
               rounded="10px"
@@ -47,7 +47,7 @@ export default function Home() {
               boxShadow= "dark-lg" 
               margin="2"
             >
-              <Image src={fromImageTOUrl(gallery.image)} height={200} width={250} onClick={onOpen} />
+              <Image src={fromImageTOUrl(product.image)} height={200} width={250} onClick={onOpen} />
 
             </GridItem>
         ))}
@@ -63,4 +63,17 @@ export default function Home() {
       </main>      
     </div>
   )
+}
+
+export async function getStaticProps() {
+  //Fetch the products
+  const product_res = await fetch(`${API_URL}/products/`)
+  const products = await product_res.json()
+
+  //Return the products as props
+  return {
+    props: {
+      products
+    }
+  }
 }

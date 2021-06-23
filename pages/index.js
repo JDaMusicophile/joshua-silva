@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import {background, Code, flexbox, Image, Text} from '@chakra-ui/react'
+import { Code, Text} from '@chakra-ui/react'
 
 
 export default function Home() {

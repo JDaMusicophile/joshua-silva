@@ -1,19 +1,9 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import {background, Code, flexbox, Image, Text, Button, Stat, StatNumber, Alert,
-  AlertIcon,
-  AlertTitle,
-  AlertDescription, Wrap, WrapItem, Container, Grid, GridItem, useDisclosure, Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton, Center} from '@chakra-ui/react'
-import { PhoneIcon, CloseButton, ExternalLinkIcon } from '@chakra-ui/icons'
+import { Image, Text, Button, Grid, GridItem, useDisclosure } from '@chakra-ui/react'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { fromImageTOUrl, API_URL } from '../Components/Utils/urls'
 import NextLink from 'next/link'
-import Link from 'next/link'
 
 
 export default function Home( {products} ) {
@@ -56,7 +46,7 @@ export default function Home( {products} ) {
         
         <flexbox align="center">
           <Text>Like What you see? Click below to head over to my Store to pick one for that fabulous wall of yours</Text>
-          <NextLink href="/Store">
+          <NextLink href="/construction">
             <Button > Store &nbsp;<ExternalLinkIcon/> </Button> 
           </NextLink>
           

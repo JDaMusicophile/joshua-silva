@@ -2,7 +2,6 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import {Text, Button} from '@chakra-ui/react'
 import {WarningTwoIcon, PhoneIcon} from '@chakra-ui/icons'
-import NextLink from 'next/link';
 
 
 export default function Home() {

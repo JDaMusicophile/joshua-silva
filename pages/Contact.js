@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import {Code, IconButton} from '@chakra-ui/react'
 
 
 export default function Contact() {

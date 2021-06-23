@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { Link, Flex, Box,  Drawer, DrawerBody, DrawerFooter, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, Menu, MenuButton, MenuList, MenuGroup, MenuItem, MenuDivider, Button, useDisclosure, HStack, LinkOverlay, LinkBox } from '@chakra-ui/react';
+import { Flex, Drawer, DrawerBody, DrawerFooter, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, Menu, MenuButton, MenuList, MenuGroup, MenuItem, MenuDivider, Button, useDisclosure, HStack } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import Image from 'next/image'; 
 import DarkModeSwitch from './DarkModeSwitch';
@@ -28,12 +28,14 @@ const Header = (props) => {
       w="100%"
       bgColor='black'
     >
-    <Flex>    
+    <Flex>  
+        <a href="/">  
         <Image
         src="/Josh_Logo_White.png"
         alt="Author Logo"
         width={45}
-        height={45}/>
+        height={45} />
+        </a>
         
         <DarkModeSwitch/>
     </Flex>

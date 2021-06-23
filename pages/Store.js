@@ -5,11 +5,12 @@ import {background, Code, flexbox, Image, Text, Button, Stat, StatNumber, Alert,
   AlertTitle,
   AlertDescription,} from '@chakra-ui/react'
 import { PhoneIcon, CloseButton } from '@chakra-ui/icons'
-import products from '../products.json'
-import { fromImageTOUrl } from '../Components/urls'
+import { fromImageTOUrl, API_URL } from '../Components/Utils/urls'
 import NextLink from 'next/link'
+import Link from 'next/link'
+import { twoDecimals } from '../Components/Utils/format'
 
-export default function Home() {
+export default function Home({ products }) {
    return (
     <div className={styles.container} >
      <background/>
@@ -32,18 +33,19 @@ export default function Home() {
         {products.map(product => (
           <div key={product.name} className={styles.product}>
             <div className={styles.product_Row}>
-            <a className={styles.card}>
-                <div className={styles.product_ColImg}>
-                    <img src={fromImageTOUrl(product.image)}/>
-                </div>
-                <div className={styles.product_Col}>
-                    {product.name}
-                    <Stat>
-                    <StatNumber>${product.price}</StatNumber>
-                    </Stat>
-                    
-                </div>
-              </a>
+              <Link href={`/products/${product.slug}`}>
+                <a className={styles.card}>
+                  <div className={styles.product_ColImg}>
+                      <img src={fromImageTOUrl(product.image)}/>
+                  </div>
+                  <div className={styles.product_Col}>
+                      {product.name}
+                      <Stat>
+                      <StatNumber>${twoDecimals(product.price)}</StatNumber>
+                      </Stat>
+                  </div>
+                </a>
+              </Link>
             </div>
           </div>
         ))}
@@ -56,4 +58,17 @@ export default function Home() {
       </main>      
     </div>
   )
+}
+
+export async function getStaticProps() {
+  //Fetch the products
+  const product_res = await fetch(`${API_URL}/products/`)
+  const products = await product_res.json()
+
+  //Return the products as props
+  return {
+    props: {
+      products
+    }
+  }
 }

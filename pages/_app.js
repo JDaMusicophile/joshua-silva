@@ -2,15 +2,17 @@ import '../styles/globals.css'
 import { ChakraProvider } from "@chakra-ui/react"
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
-import Image from 'react'
+import { AuthProvider } from '../Components/Context/AuthContext'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider>
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
-    </ChakraProvider>
+    <AuthProvider>
+      <ChakraProvider>
+        <Header />
+        <Component {...pageProps} />
+        <Footer />
+      </ChakraProvider>
+    </AuthProvider>
   )
 }
 

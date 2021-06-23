@@ -12,9 +12,9 @@ import {background, Code, flexbox, Image, Text, Button, Stat, StatNumber, Alert,
   ModalCloseButton,} from '@chakra-ui/react'
 import { PhoneIcon, CloseButton, ExternalLinkIcon } from '@chakra-ui/icons'
 import galleries from '../gallery.json'
-import { fromImageTOUrl } from '../Components/urls'
+import { fromImageTOUrl, API_URL } from '../Components/Utils/urls'
 import NextLink from 'next/link'
-import BasicUsage from '../Components/modal'
+import Link from 'next/link'
 
 
 export default function Home() {
@@ -39,7 +39,6 @@ export default function Home() {
         
         <Grid templateColumns="repeat(5, 1fr)" templateRows="repeat(4, 1fr)" >
         {galleries.map(gallery => (
-          
             <GridItem 
               boxShadow="base"
               rounded="10px"
@@ -56,8 +55,8 @@ export default function Home() {
         
         <flexbox align="center">
           <Text>Like What you see? Click below to head over to my Store to pick one for that fabulous wall of yours</Text>
-          <NextLink href="/construction">
-            <Button > Store <ExternalLinkIcon/> </Button> 
+          <NextLink href="/Store">
+            <Button > Store &nbsp;<ExternalLinkIcon/> </Button> 
           </NextLink>
           
         </flexbox>     

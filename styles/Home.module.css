@@ -25,6 +25,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .footer a {
@@ -52,7 +53,6 @@
 .title {
   margin: 0;
   line-height: 1.15;
-
   font-size: 4rem;
 }
 
@@ -147,7 +147,7 @@
 }
 
 .product_ColImg{
-  max-width: 100px;
+  max-width: 600px;
   margin-right: 25px;
 }
 

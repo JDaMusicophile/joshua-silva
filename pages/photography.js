@@ -9,14 +9,14 @@ import {background, Code, flexbox, Image, Text, Button, Stat, StatNumber, Alert,
   ModalHeader,
   ModalFooter,
   ModalBody,
-  ModalCloseButton,} from '@chakra-ui/react'
+  ModalCloseButton, Center} from '@chakra-ui/react'
 import { PhoneIcon, CloseButton, ExternalLinkIcon } from '@chakra-ui/icons'
 import { fromImageTOUrl, API_URL } from '../Components/Utils/urls'
 import NextLink from 'next/link'
 import Link from 'next/link'
 
 
-export default function Home() {
+export default function Home( {products} ) {
   const { isOpen, onOpen, onClose } = useDisclosure()
    return (
     <div >
@@ -35,7 +35,8 @@ export default function Home() {
         <Text className={styles.description} fontWeight='thin'>
           Welcome to my Photography Gallery
         </Text>
-        
+        <br/>
+        <br/>
         <Grid templateColumns="repeat(5, 1fr)" templateRows="repeat(4, 1fr)" >
         {products.map(product => (
             <GridItem 
@@ -51,6 +52,7 @@ export default function Home() {
             </GridItem>
         ))}
         </Grid>
+     
         
         <flexbox align="center">
           <Text>Like What you see? Click below to head over to my Store to pick one for that fabulous wall of yours</Text>

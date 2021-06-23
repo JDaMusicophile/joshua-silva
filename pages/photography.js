@@ -47,7 +47,7 @@ export default function Home( {products} ) {
               boxShadow= "dark-lg" 
               margin="2"
             >
-              <Image src={fromImageTOUrl(product.image)} height={200} width={250} onClick={onOpen} />
+              <Image src={fromImageTOUrl(product.image)} height={210} width={250} onClick={onOpen} />
 
             </GridItem>
         ))}

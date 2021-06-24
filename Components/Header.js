@@ -6,7 +6,6 @@ import DarkModeSwitch from './DarkModeSwitch';
 import NextLink from 'next/link';
 import {SocialIcon } from 'react-social-icons';
 import styles from '../styles/Home.module.css';
-import AuthContext from '../Components/Context/AuthContext'
 
 
 const Header = (props) => {
@@ -14,8 +13,6 @@ const Header = (props) => {
   const toggleMenu = () => setShow(!show);
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
-  const { user, logoutUser } = useContext(AuthContext)
-
   return (
     
 
@@ -46,38 +43,6 @@ const Header = (props) => {
           justify={['center', 'space-between', 'flex-end', 'flex-end']}
           direction={['column', 'row', 'row', 'row']}
         >
-          <div>
-      <Menu>
-        <MenuButton as={Button} colorScheme="red">
-          Profile
-        </MenuButton>
-        <MenuList>
-          <MenuGroup title="Profile">
-            {user ? (
-              <MenuItem as="a" href="/account" >
-                {user.email}
-              </MenuItem>
-            ) : (
-                <MenuItem as="a" href="/login">
-                  Log in
-                </MenuItem>
-            )}
-            
-            
-          </MenuGroup>
-          <MenuDivider />
-          <MenuGroup title="Options">
-            
-              <MenuItem as="a" href="https://github.com/JDaMusicophile/joshua-silva">Source Code</MenuItem>
-              <MenuItem as="a" onClick={logoutUser}><a>Logout</a></MenuItem>
-  
-          </MenuGroup>
-        </MenuList>
-      </Menu>
-        
-
-      </div> &nbsp;&nbsp;
-
           <Button ref={btnRef} bgColor="teal" onClick={onOpen} alignSelf="flex-end">
           <HamburgerIcon/>
           </Button>
@@ -101,18 +66,23 @@ const Header = (props) => {
                 </Button>
               </NextLink>
               <NextLink href="/About" passHref>
-                <Button as="a" variant="ghost" aria-label="Home" my={5} w="100%">
+                <Button as="a" variant="ghost" aria-label="About" my={5} w="100%">
                   About
                 </Button>
               </NextLink>
               <NextLink href="/Contact" passHref>
-                <Button as="a" variant="ghost" aria-label="Home" my={5} w="100%">
+                <Button as="a" variant="ghost" aria-label="Contact" my={5} w="100%">
                   Contact
                 </Button>
               </NextLink>
               <NextLink href="/More" passHref>
-                <Button as="a" variant="ghost" aria-label="Home" my={5} w="100%">
+                <Button as="a" variant="ghost" aria-label="More" my={5} w="100%">
                   More
+                </Button>
+              </NextLink>
+              <NextLink href="/" passHref>
+                <Button as="a" variant="ghost" aria-label="Photography" my={5} w="100%">
+                  Photography
                 </Button>
               </NextLink>
             </Flex>

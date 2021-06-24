@@ -2,6 +2,7 @@ import { createContext, useState, useEffect } from 'react';
 import { useRouter } from 'next/router'
 import { Magic } from 'magic-sdk'
 import { MAGIC_PUBLIC_KEY } from '../Utils/urls';
+import { OAuthExtension } from '@magic-ext/oauth';
 
 
 const AuthContext = createContext()
@@ -68,7 +69,9 @@ export const AuthProvider = (props) => {
     }
 
     useEffect(() => {
-        magic = new Magic(MAGIC_PUBLIC_KEY)
+        magic = new Magic(MAGIC_PUBLIC_KEY, {
+            extensions: [new OAuthExtension()],
+        })
 
         checkUserLoggedIn()
     }, [])

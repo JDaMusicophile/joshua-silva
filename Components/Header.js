@@ -115,11 +115,6 @@ const Header = (props) => {
                   More
                 </Button>
               </NextLink>
-              <NextLink href="/photography" passHref>
-                <Button as="a" variant="ghost" aria-label="Home" my={5} w="100%">
-                  Photography
-                </Button>
-              </NextLink>
             </Flex>
           </DrawerBody>
 

@@ -98,6 +98,7 @@ const Header = (props) => {
             ReactDOM.render(<SocialIcon url="https://github.com/JDaMusicophile"/>, document.body);
 
             </HStack>
+            
           </footer>
          
           </DrawerFooter>

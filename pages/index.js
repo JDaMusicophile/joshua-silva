@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { Code, Text} from '@chakra-ui/react'
+import { Code, Text, Box} from '@chakra-ui/react'
+import ReactTypingEffect from 'react-typing-effect';
 
 
 export default function Home() {
@@ -18,14 +19,36 @@ export default function Home() {
       
       <main className={styles.main}>    
         <h1 className={styles.title}>
-          <a href="https://www.instagram.com/j_damusicophile/" fontWeight="extrabold">Josh Silva</a>
+          <a href="https://www.instagram.com/j_damusicophile/" fontWeight="extrabold">
+          <ReactTypingEffect className="typingeffect" text={['Josh Silva', 'جوش سيلفا', 'ジョシュシルバ', 'ජොෂ් සිල්වා', '']} speed={100} eraseDelay={900}/>
+          </a>
         </h1>
+
+        <br/>
         
         <Text className={styles.description} fontWeight='thin'>
           Welcome to my {' '}
           <Code className={styles.code}>Personal Portfolio</Code>
         </Text>
-      </main>    
+        <br/>
+        <Box padding='10' maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" className={styles.glass}>
+          <Box mt="1"
+          fontWeight="semibold"
+          as="h4"
+          lineHeight="tight"
+          >
+            <p > Hi I'm Josh</p>
+            <Text fontWeight="thin">Sorry my full name will remain confidential as the internet is not the safe place we all force ourselves to believe in.</Text>
+          </Box>
+        
+        </Box>
+
+        <br/>
+        
+        
+      </main> 
+       
+      
       
     </div>
   )

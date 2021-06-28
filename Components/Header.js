@@ -5,7 +5,7 @@ import Image from 'next/image';
 import DarkModeSwitch from './DarkModeSwitch';
 import NextLink from 'next/link';
 import {SocialIcon } from 'react-social-icons';
-import styles from '../styles/Home.module.css';
+import styles from '../styles/Home.module.scss';
 
 
 const Header = (props) => {

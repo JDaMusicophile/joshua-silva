@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 import {Code, WrapItem, Avatar, Image} from '@chakra-ui/react'
 
 export default function About() {

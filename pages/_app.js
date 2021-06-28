@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import '../styles/globals.scss'
 import { ChakraProvider } from "@chakra-ui/react"
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'

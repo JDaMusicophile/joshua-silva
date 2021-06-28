@@ -1,5 +1,7 @@
 import { useColorMode, IconButton } from '@chakra-ui/react'
 import { MoonIcon, SunIcon} from '@chakra-ui/icons'
+import * as React from 'react'
+import { Frame } from "framer-motion"
 
 const DarkModeSwitch = () => {
     const { colorMode, toggleColorMode } = useColorMode()
@@ -12,5 +14,8 @@ const DarkModeSwitch = () => {
     )
 
 }
+
+
+
 
 export default DarkModeSwitch

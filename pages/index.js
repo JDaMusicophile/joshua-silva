@@ -67,8 +67,7 @@ export default function Home() {
         <br/>
         <motion.div
           variants={fadeInUp}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}>
+          whileHover={{ scale: 1.05 }}>
         <Box padding='10' maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" className={styles.glass}>
           <Box mt="1"
           fontWeight="semibold"

@@ -20,7 +20,7 @@ export default function Web_Development() {
 
         <p className={styles.description}>
           Learn how this website was made, using: {' '}
-          <Code className={styles.code}>-Next.js- -Chakra UI- -Vercel- -Apollo Client- </Code>
+          <Code className={styles.code}>-Next.js- -Chakra UI- -Vercel- -Apollo Client- -Sass- -Framer motion- </Code>
         </p>
 
         <div className={styles.grid}>
@@ -40,6 +40,38 @@ export default function Web_Development() {
           >
             <h2>Examples &rarr;</h2>
             <p>Discover and deploy boilerplate example Next.js projects.</p>
+          </a>
+
+          
+
+          <a
+            href="https://chakra-ui.com/docs/getting-started"
+            className={styles.card}
+          >
+            <h2>Chackra UI &rarr;</h2>
+            <p>
+              Learn how to make beautiful websites, with amazing UI using Chackra UI.
+            </p>
+          </a>
+
+          <a
+            href="https://www.framer.com/docs/"
+            className={styles.card}
+          >
+            <h2>Framer motion &rarr;</h2>
+            <p>
+              Learn how to make beautiful websites, with amazing animations using Framer motion.
+            </p>
+          </a>
+
+          <a
+            href="https://sass-lang.com/documentation"
+            className={styles.card}
+          >
+            <h2>Sass &rarr;</h2>
+            <p>
+              Learn how to add amazing styling to your website using Sass.
+            </p>
           </a>
 
           <a

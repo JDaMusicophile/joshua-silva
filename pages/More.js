@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
+import { Text } from '@chakra-ui/react'
 
 
 export default function About() {
@@ -13,7 +14,8 @@ export default function About() {
         </Head>
         
         
-        <main className={styles.main}>       
+        <main className={styles.main}>
+                 
           <h1 className={styles.title}>
             <a> More Interesting Stuff </a>
           </h1>
@@ -24,13 +26,13 @@ export default function About() {
             <p></p>
           </a>
 
-          <a href="" className={styles.card}>
+          <a href="construction" className={styles.card}>
             <h2>SpaceX Launches &rarr;</h2>
             <p></p>
           </a>
 
           <a
-            href=""
+            href="construction"
             className={styles.card}
           >
             <h2>Astronomy &rarr;</h2>
@@ -43,6 +45,11 @@ export default function About() {
           >
             <h2>Web Development &rarr;</h2>
             <p></p>
+          </a>
+
+          <a href="/construction" className={styles.card}>
+            <h2>A Dog's Guide &rarr;</h2>
+            <Text fontWeight='thin' fontSize='small' fontStyle='normal'> Do you want to or already own a dog? Click this guide to find out more </Text>
           </a>
         </div>
         </main> 

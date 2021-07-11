@@ -6,11 +6,36 @@ import DarkModeSwitch from './DarkModeSwitch';
 import NextLink from 'next/link';
 import {SocialIcon } from 'react-social-icons';
 import styles from '../styles/Home.module.scss';
+import { motion } from "framer-motion"
 
+let easing = [0.6, -0.05, 0.01, 0.99];
+
+const fadeInUp = {
+  initial: {
+    y: 60,
+    opacity: 0,
+    transition: { duration: 0.6, ease: easing }
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: easing
+    }
+  }
+};
+
+const stagger = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
 
 const Header = (props) => {
   const [show, setShow] = useState(false);
-  const toggleMenu = () => setShow(!show);
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
   return (
@@ -26,6 +51,10 @@ const Header = (props) => {
       bgColor='black'
     >
     <Flex>  
+      <motion.div
+          variants={fadeInUp}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}>
         <a href="/">  
         <Image
         src="/Josh_Logo_White.png"
@@ -33,8 +62,13 @@ const Header = (props) => {
         width={45}
         height={45} />
         </a>
-        
+      </motion.div>
+      <motion.div
+          variants={fadeInUp}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}>
         <DarkModeSwitch/>
+        </motion.div>
     </Flex>
 
              
@@ -43,10 +77,15 @@ const Header = (props) => {
           justify={['center', 'space-between', 'flex-end', 'flex-end']}
           direction={['column', 'row', 'row', 'row']}
         >
+          <motion.div
+          variants={fadeInUp}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}>
           <Button ref={btnRef} bgColor="teal" onClick={onOpen} alignSelf="flex-end">
           <HamburgerIcon/>
           </Button>
-          
+          </motion.div>
+      
           <Drawer
         isOpen={isOpen}
         placement="right"
@@ -92,6 +131,7 @@ const Header = (props) => {
           
           <footer className={styles.footer}>
             <HStack>
+              
             ReactDOM.render(<SocialIcon url="https://twitter.com/JDaMusicophile"/>, document.body);
             ReactDOM.render(<SocialIcon url="https://www.instagram.com/j_damusicophile/"/>, document.body);
             ReactDOM.render(<SocialIcon url="https://www.facebook.com/JDaMusicophile/"/>, document.body);
@@ -104,6 +144,7 @@ const Header = (props) => {
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
+      
       
       
       </Flex>     

@@ -2,7 +2,33 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import { Code, Text, Box} from '@chakra-ui/react'
 import ReactTypingEffect from 'react-typing-effect'
+import { motion } from 'framer-motion'
 
+let easing = [0.6, -0.05, 0.01, 0.99];
+
+const fadeInUp = {
+  initial: {
+    y: 60,
+    opacity: 0,
+    transition: { duration: 0.6, ease: easing }
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: easing
+    }
+  }
+};
+
+const stagger = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
 
 
 export default function Home() {
@@ -17,7 +43,11 @@ export default function Home() {
       </Head>
       
       
-      <main className={styles.main}>    
+      <main className={styles.main}> 
+      <motion.div
+             animate={{ opacity: 1 }}
+             initial={{ opacity: 0 }}
+             className={styles.title}>   
         <h1 className={styles.title}>
           <a href="https://www.instagram.com/j_damusicophile/" fontWeight="extrabold">
             
@@ -25,6 +55,8 @@ export default function Home() {
           
           </a>
         </h1>
+        </motion.div>
+        <motion.div variants={stagger} className={styles.inner}>
 
         <br/>
         
@@ -33,19 +65,25 @@ export default function Home() {
           <Code className={styles.code}>Personal Portfolio</Code>
         </Text>
         <br/>
+        <motion.div
+          variants={fadeInUp}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}>
         <Box padding='10' maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" className={styles.glass}>
           <Box mt="1"
           fontWeight="semibold"
           as="h4"
           lineHeight="tight"
           >
-            <p > Hi I'm Josh</p>
+            <p > <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px" height="20px"/>Hi I'm Josh</p>
             <Text fontWeight="thin">Sorry my full name will remain confidential as the internet is not the safe place we all force ourselves to believe in.</Text>
           </Box>
         
         </Box>
+        </motion.div>
 
         <br/>
+        </motion.div>
         
         
       </main> 

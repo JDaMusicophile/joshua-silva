@@ -3,8 +3,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Getting Started
 First, Install Next.js using following commands
 
+```bash
+npm install next react react-dom
 npm i create-next-app
 npx create-next-app "Desired Name"
+```
 
 Next, run the development server:
 
@@ -36,15 +39,15 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The used dependencies in this project are as follows:
 
     - Framer 
-    ``` npm install framer-motion ```
+    ```bash npm install framer-motion ```
         - [Framer Documentation](https://www.framer.com/docs/) - learn about Framer's features and API
 
     - Chackra UI 
-    ```npm i @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^4```
+    ```bash npm i @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^4```
         - [Chackra UI Documentation](https://chakra-ui.com/docs/getting-started) - learn about Chackra UI's features and API
 
     - Sass
-    ```npm install -g sass```
+    ```bash npm install -g sass```
         - [Sass Documentation](https://sass-lang.com/documentation)
 
 ## Deploy on Vercel

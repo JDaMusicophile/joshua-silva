@@ -119,7 +119,7 @@ const Header = (props) => {
                   More
                 </Button>
               </NextLink>
-              <NextLink href="https://jd-a-photophile.vercel.app/" passHref>
+              <NextLink href="https://jdaphotophile.vercel.app/" passHref>
                 <Button as="a" variant="ghost" aria-label="Photography" my={5} w="100%">
                   Photography
                 </Button>

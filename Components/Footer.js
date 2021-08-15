@@ -1,5 +1,5 @@
 import styles from '../styles/Home.module.scss'
-import Image from 'next/image'
+import {Text} from '@chakra-ui/react'
 
 const Footer = () => {
     return (
@@ -9,11 +9,21 @@ const Footer = () => {
         rel="noopener noreferrer"
         
     >
-        Powered by{' '}
-        <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </span> &nbsp;
-        © Joshua Silva | 2021
+        <stack>
+            <a href="https://vercel.com">
+            <div className={styles.vercel} >
+                Powered by &nbsp; 
+                <span role="img" aria-label="Vercel Logo">▲</span>
+                Vercel
+            </div>
+            </a>
+        <div>
+            <Text padding="4">
+            © Joshua Silva | 2021
+            </Text>
+        </div>
+        </stack>
+        
     </footer>
     )
 }

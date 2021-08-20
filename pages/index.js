@@ -40,7 +40,7 @@ export default function Home() {
         <link rel="icon" href="/Josh_Logo_White.png" />
         <script data-ad-client="ca-pub-1604087287433448" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         Google Analytics
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LL0ZZ6NCR9"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-11EPZ1LT3W"></script>
       
         <meta name="google-site-verification" content="AJMl2Noy2tSRNUBlK3Fcmcqayv3lwjELM20KbLxAhIQ" />
       </Head>
@@ -80,7 +80,7 @@ export default function Home() {
             lineHeight="tight"
             >
               <p > <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px" height="20px"/>Hi I'm Josh</p>
-              <Text fontWeight="thin">This is a test run</Text>
+              <Text fontWeight="thin">Sorry my full name will remain confidential as the internet is not the safe place we all force ourselves to believe in.</Text>
             </Box>
           
           </Box>
@@ -92,20 +92,6 @@ export default function Home() {
         <br/>
         <Divider/>
         <br/>
-        <div>
-
-        <Box >
-            
-              <Text>Hi I'm Josh</Text>
-              <Text fontWeight="thin">Sorry my full name will remain confidential as the internet is not the safe place we all force ourselves to believe in.</Text>
-            
-          
-        </Box>
-        </div>
-        
-        
-        
-
         <br/>
         </motion.div>
         

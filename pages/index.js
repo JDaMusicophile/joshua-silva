@@ -53,7 +53,7 @@ export default function Home() {
         <h1 className={styles.title}>
           <a href="https://www.instagram.com/j_damusicophile/" fontWeight="extrabold">
             
-            <ReactTypingEffect className="typingeffect" text={['Josh Silva', 'جوش سيلفا', 'ジョシュシルバ', 'ජොෂ් සිල්වා', '']} speed={100} eraseDelay={900}/>
+            <ReactTypingEffect className="typingeffect" text={['Josh Silva', 'جوش سيلفا', 'ジョシュシルバ', 'ජොෂ් සිල්වා', 'जोश सिल्वा','']} speed={100} eraseDelay={900}/>
           
           </a>
         </h1>

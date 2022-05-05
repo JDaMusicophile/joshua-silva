@@ -80,7 +80,6 @@ export default function Home() {
             lineHeight="tight"
             >
               <p > <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px" height="20px"/>Hi I'm Josh</p>
-              <Text fontWeight="thin">Sorry my full name will remain confidential as the internet is not the safe place we all force ourselves to believe in.</Text>
             </Box>
           
           </Box>

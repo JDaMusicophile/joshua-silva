@@ -109,8 +109,18 @@ const Header = (props) => {
                   About
                 </Button>
               </NextLink>
+              <NextLink href="/gpt3-demo" passHref>
+                <Button as="a" variant="ghost" aria-label="gpt3" my={5} w="100%">
+                  Chat GPT 3 Demo
+                </Button>
+              </NextLink>
               <NextLink href="/Contact" passHref>
                 <Button as="a" variant="ghost" aria-label="Contact" my={5} w="100%">
+                  Contact
+                </Button>
+              </NextLink>
+              <NextLink href="/index.html" passHref>
+                <Button as="a" variant="ghost" aria-label="Game" my={5} w="100%">
                   Contact
                 </Button>
               </NextLink>
